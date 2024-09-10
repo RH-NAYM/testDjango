@@ -1,5 +1,23 @@
-{% include "navbar.html" %}
+{% extends "main.html" %}
+
+{% block content %}
+
 
 <h1>
     My Test HOME Template
 </h1>
+
+<div>
+    <div>
+        {%for item in Data%}
+        <div>
+            <h5>
+                {{item.id}} --> {{item.name}}
+            </h5>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock content %}
